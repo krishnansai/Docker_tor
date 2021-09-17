@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  TorService:
+    build: .
+    image: torservice
+    network_mode: host
+    container_name: my_tor_container
+    entrypoint:
+      - "tor"
+    restart: always
